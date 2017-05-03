@@ -1,4 +1,4 @@
-####创建ZooKeeper Session
+#### 创建ZooKeeper Session
 
 	ZooKeeper(
 	 String connectString,
@@ -16,7 +16,7 @@ Watcher 是个借口，通过这个接口可以收到session建立或者断开�
 
 如果连接断开，则会收到DISCONNECT通知。
 
-#####telnet
+##### telnet
 通过telnet zkserver，可以获取些基本信息。
 
 如
@@ -26,7 +26,7 @@ Watcher 是个借口，通过这个接口可以收到session建立或者断开�
 	
 	dump 查看连接的过期时间
 	
-####Create
+#### Create
 
 
 	String create(String path,byte[]data,ACL,CreateMode)
@@ -35,7 +35,7 @@ Watcher 是个借口，通过这个接口可以收到session建立或者断开�
 
 CreateMode是节点类型的枚举。
 
-####Stat
+#### Stat
 
 	 byte[] getData(String path,boolean watch,Stat stat)
 	 
@@ -48,12 +48,16 @@ Stat 非必须，如果有的话，会将节点的信息复制到这个对象。
 同步版本的master[实现](https://github.com/llohellohe/zookeeper/blob/master/src/main/java/yangqi/zookeeper/example/masterworker/Master.java)
 
 
-####异步操作
+#### 异步操作
 ZK的操作都提供了异步操作版本，有了异步版本后，可以消除部分while循环了。
 
 比如create的异步操作，
 
-	void create(String path, byte[] data,	        List<ACL> acl,	        CreateMode createMode,	        AsyncCallback.StringCallback cb,	        Object ctx)
+	void create(String path, byte[] data,
+	        List<ACL> acl,
+	        CreateMode createMode,
+	        AsyncCallback.StringCallback cb,
+	        Object ctx)
 
 前四个参数和同步操作相同，多了个callback和用于上下文传递的ctx。
 
@@ -67,7 +71,7 @@ rc为返回的状态码，通过状态码可以判断操作是否成功。
 
 ctx即用于传递的上下文对象。
 
-####Master-Worker实例
+#### Master-Worker实例
 [同步操作版本的master](https://github.com/llohellohe/zookeeper/blob/master/src/main/java/yangqi/zookeeper/example/masterworker/Master.java)
 
 [异步操作版本的master](https://github.com/llohellohe/zookeeper/blob/master/src/main/java/yangqi/zookeeper/example/masterworker/AsynMaster.java)
