@@ -50,7 +50,8 @@ Stat 非必须，如果有的话，会将节点的信息复制到这个对象。
 
 如果watch为true的话，一旦后续数据发生变化，那么在创建session时的watch对象将收到通知。
 
-同步版本的master[实现](https://github.com/llohellohe/zookeeper/blob/master/src/main/java/yangqi/zookeeper/example/masterworker/Master.java)
+同步版本的master[实现1](https://github.com/llohellohe/zookeeper/blob/master/src/main/java/yangqi/zookeeper/example/masterworker/Master.java)
+[实现2](https://github.com/arslht/zookeeper/blob/master/src/main/javaApi/Master.java)
 
 
 #### 异步操作
