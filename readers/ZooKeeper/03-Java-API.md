@@ -62,12 +62,12 @@ ZK的操作都提供了异步操作版本，有了异步版本后，可以消除
 	void create(String path, byte[] data,
 	        List<ACL> acl,
 	        CreateMode createMode,
-	        AsyncCallback.StringCallback cb,
-	        Object ctx)
+	        AsyncCallback.StringCallback cb, //提供回调方法的对象
+	        Object ctx) //用户指定上下文信息（回调方法调用是传入的对象实例）
 
 前四个参数和同步操作相同，多了个callback和用于上下文传递的ctx。
 
-其中Callback有多种类型，比如StringCallback和DataCallback。
+其中Callback（回调函数）有多种类型，比如StringCallback和DataCallback。
 
 StringCallback有个接口方法：
 
