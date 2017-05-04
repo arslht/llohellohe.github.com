@@ -82,6 +82,12 @@ ctx即用于传递的上下文对象。
 
 [异步操作版本的master](https://github.com/llohellohe/zookeeper/blob/master/src/main/java/yangqi/zookeeper/example/masterworker/AsynMaster.java)
 
+#### 注册从节点
 
+#### 任务队列化
 
+/tasks 使用有序节点
 
+#### 管理客户端
+
+通过getData和getChildren方法来获得主从系统的运行状态。
