@@ -1,5 +1,6 @@
 #### 创建ZooKeeper Session
 
+
 	ZooKeeper(
 	 String connectString,
 	 int sessionTimeout,
@@ -8,13 +9,17 @@
 	
 sessionTimeout单位为毫秒，
 
-Watcher 是个借口，通过这个接口可以收到session建立或者断开的事件，
+Watcher 是个接口，通过这个接口可以收到session建立或者断开的事件，
 
 同样地，也能监视ZK数据的变化。
 
 当连接成功后，会获得SyncConnected的通知，
 
 如果连接断开，则会收到DISCONNECT通知。
+
+##### 实现Watcher
+
+一个对象的构造函数没有完成前不要调用这个对象的其他方法。
 
 ##### telnet
 通过telnet zkserver，可以获取些基本信息。
