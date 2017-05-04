@@ -77,6 +77,10 @@ rc为返回的状态码，通过状态码可以判断操作是否成功。
 
 ctx即用于传递的上下文对象。
 
+##### 设置元数据
+
+使用异步API设置元数据：三个目录/tasks、/assign和workers
+
 #### Master-Worker实例
 [同步操作版本的master](https://github.com/llohellohe/zookeeper/blob/master/src/main/java/yangqi/zookeeper/example/masterworker/Master.java)
 
