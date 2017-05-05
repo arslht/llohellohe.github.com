@@ -81,6 +81,10 @@ ctx即用于传递的上下文对象。
 
 使用异步API设置元数据：三个目录/tasks、/assign和workers
 
+zkCli.sh –server 10.77.20.23:2181
+
+用户在客户端可以通过 telnet 或 nc 向 ZooKeeper 提交相应的命令（四字命令）
+
 #### Master-Worker实例
 [同步操作版本的master](https://github.com/llohellohe/zookeeper/blob/master/src/main/java/yangqi/zookeeper/example/masterworker/Master.java)
 
