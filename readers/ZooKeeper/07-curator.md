@@ -18,6 +18,21 @@ Curator是构建在ZooKeeper上的API，它屏蔽一些复杂的ZooKeeper操作�
 
 	zkc.create().withMode(CreateMode.PERSISTENT).forPath("/mypath", new byte[0]);
 
+#### 监听器
+
+`CuratorListenner`接口
+
+#### 状态转换
+
+CONNECTED SUSPENDED RECONNECTED LOST
+当处理状态的转换时，建议将所有主节点操作请求暂停，因为zk客户端可能不能重连，也可能重连后不是主要主节点
+
+#### 两种边界
+
+创建有序节点的保障
+
+删除节点的保障
+
 #### leader latch 和leader selection
 
 通过Curator可以方便的进行leader的选举和控制。
